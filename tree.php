@@ -25,7 +25,7 @@ function outdirInfo($name, $path, $iter)
     $dir = opendir($path); // открываем каталог
     // перебираем элементы каталога пока они не закончатся
     while (($file = readdir($dir)) !== false) {
-        if (is_dir($path . '/' . $file) && $file != '.' && $file != '..') // если элемент каталог
+        if (is_dir($path . '/' . $file) && $file != '.' && $file != '..'&& $file!='.git') // если элемент каталог
         {
             outdirInfo($file, $path . '/' . $file, $iter);
         } else
